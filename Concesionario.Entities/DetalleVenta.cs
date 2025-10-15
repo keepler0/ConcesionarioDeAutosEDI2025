@@ -13,7 +13,7 @@ namespace Concesionario.Entities
         public virtual Venta? Venta { get; set; }
 		[ForeignKey(nameof(Auto))]
         public int AutoId { get; set; }
-        public Auto? Auto { get; set; }
+        public virtual Auto? Auto { get; set; }
 		[DataType(DataType.Currency)]
         public decimal PrecioUnitario { get; set; }
 	}

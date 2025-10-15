@@ -18,7 +18,7 @@ namespace Concesionario.Entities
         [ForeignKey(nameof(Provincia))]
         public int ProvinciaId { get; set; }
         public virtual Provincia? Provincia { get; set; }
-        public ICollection<Cliente> Clientes { get; set; }
-        public ICollection<Empleado> Empleados { get; set; }
+        public virtual ICollection<Cliente> Clientes { get; set; }
+        public virtual ICollection<Empleado> Empleados { get; set; }
     }
 }
