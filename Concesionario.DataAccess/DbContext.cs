@@ -30,7 +30,7 @@ namespace Concesionario.DataAccess
 
 		public T GetById(int Id)
 		{
-			return _Items.FirstOrDefault(i => i.Id == Id);
+			return _Items.FirstOrDefault(i => i.Id == Id)!;
 		}
 
 		public T Save(T Entity)

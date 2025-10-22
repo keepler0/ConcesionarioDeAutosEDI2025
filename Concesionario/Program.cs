@@ -1,10 +1,8 @@
-
 using Concesionario.Abstractions;
 using Concesionario.Application;
 using Concesionario.DataAccess;
 using Concesionario.Repository;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.Extensions.Options;
 
 namespace Concesionario
 {
@@ -22,10 +20,11 @@ namespace Concesionario
 			builder.Services.AddSwaggerGen();
 			builder.Services.AddDbContext<DbDataAccess>(options =>
 			{
-				options.UseSqlServer(builder.Configuration.GetConnectionString("DefailtConnection"),
-					options => options.MigrationsAssembly("Biblioteca.WebApi"));
+				options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection"),
+					options => options.MigrationsAssembly("Concesionario.WebApi"));
 				options.UseLazyLoadingProxies();
 			});
+			builder.Services.AddAutoMapper(typeof(Program));
 			builder.Services.AddScoped(typeof(IRepository<>), typeof(Repository<>));
 			builder.Services.AddScoped(typeof(IApplication<>), typeof(Application<>));
 			builder.Services.AddScoped(typeof(IDbContext<>), typeof(DbContext<>));

@@ -12,6 +12,6 @@ namespace Concesionario.Entities
         public int Id { get; set; }
 		[StringLength(50)]
 		public string Descripcion { get; set; } = string.Empty;
-		public ICollection<Auto> Autos { get; set; }
+		public virtual ICollection<Auto> Autos { get; set; }
 	}
 }

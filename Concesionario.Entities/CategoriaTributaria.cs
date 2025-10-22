@@ -12,6 +12,6 @@ namespace Concesionario.Entities
         public int Id { get; set; }
 		[StringLength(50)]
         public string Descripcion { get; set; } = string.Empty;
-        public ICollection<Cliente> Clientes { get; set; }
+        public virtual ICollection<Cliente> Clientes { get; set; }
     }
 }
