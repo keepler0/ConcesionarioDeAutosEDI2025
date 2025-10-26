@@ -1,15 +1,17 @@
 ﻿using Concesionario.Abstractions;
+using System.ComponentModel.DataAnnotations;
 
 namespace Concesionario.Entities
 {
-	public class Rol:IEntidad
+	public class TipoRol:IEntidad
 	{
-		public Rol()
+		public TipoRol()
 		{
 			Empleados = new HashSet<Empleado>();
 		}
 		public int Id { get; set; }
+		[StringLength(50)]
 		public string Descripcion { get; set; } = string.Empty;
-		public ICollection<Empleado> Empleados { get; set; }
+		public virtual ICollection<Empleado> Empleados { get; set; }
 	}
 }

@@ -27,7 +27,7 @@ namespace Concesionario.Entities
 		public virtual Sector? Sector { get; set; }
 		[ForeignKey(nameof(Rol))]
 		public int RolId { get; set; }
-		public virtual Rol? Rol { get; set; }
+		public virtual TipoRol? Rol { get; set; }
 		[ForeignKey(nameof(Ciudad))]
 		public int CiudadId { get; set; }
 		public virtual Ciudad? Ciudad { get; set; }

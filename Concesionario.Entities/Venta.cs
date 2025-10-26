@@ -27,6 +27,6 @@ namespace Concesionario.Entities
         public decimal Total { get; set; }
         [DataType(DataType.DateTime)]
         public DateTime Fecha { get; set; }
-        public ICollection<DetalleVenta> DetallesVentas { get; set; }
+        public virtual ICollection<DetalleVenta> DetallesVentas { get; set; }
     }
 }

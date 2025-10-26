@@ -62,6 +62,6 @@ namespace Concesionario.Entities
 		[ForeignKey(nameof(Transmision))]
 		public int TransmisionId { get; set; }
 		public virtual Transmision? Transmision { get; set; }
-        public ICollection<DetalleVenta> DetallesVentas { get; set; }
+        public virtual ICollection<DetalleVenta> DetallesVentas { get; set; }
     }
 }
