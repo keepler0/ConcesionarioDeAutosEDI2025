@@ -10,7 +10,6 @@ namespace Concesionario.Entities
         {
             Ventas = new HashSet<Venta>();
         }
-        public int Id { get; set; }
 		[StringLength(50)]
 		public string Descripcion { get; set; } = string.Empty;
         public virtual ICollection<Venta> Ventas { get; set; }
