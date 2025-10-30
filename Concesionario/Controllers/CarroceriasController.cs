@@ -55,7 +55,7 @@ namespace Concesionario.WebApi.Controllers
 			if (carroceriaBack is null) return NotFound();
 			carroceriaBack = _mapper.Map<Carroceria>(carroceriaRequestDto);
 			_carroceria.Save(carroceriaBack);
-			return Ok();
+			return Ok(_mapper.Map<CarroceriaResponseDto>(carroceriaBack));
 		}
 		[HttpDelete]
 		[Route("Delete")]

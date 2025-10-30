@@ -54,7 +54,7 @@ namespace Concesionario.WebApi.Controllers
 			if (colorBack is null) return NotFound();
 			colorBack = _mapper.Map<Color>(colorRequestDto);
 			_color.Save(colorBack);
-			return Ok();
+			return Ok(_mapper.Map<ColorResponseDto>(colorBack));
 		}
 		[HttpDelete]
 		[Route("Delete")]

@@ -57,7 +57,7 @@ namespace Concesionario.WebApi.Controllers
 			if (combustibleBack is null) return NotFound();
 			combustibleBack = _mapper.Map<Combustible>(combustibleRequestDto);
 			_combustible.Save(combustibleBack);
-			return Ok();
+			return Ok(_mapper.Map<CombustibleResponseDto>(combustibleBack));
 		}
 		[HttpDelete]
 		[Route("Delete")]

@@ -58,7 +58,7 @@ namespace Concesionario.WebApi.Controllers
 			if (tipoDePagoBack is null) return NotFound();
 			tipoDePagoBack = _mapper.Map<TipoDePago>(tipoDePagoRequestDto);
 			_tipoDePago.Save(tipoDePagoBack);
-			return Ok();
+			return Ok(_mapper.Map<TipoDePagoResponseDto>(tipoDePagoBack));
 		}
 		[HttpDelete]
 		[Route("Delete")]

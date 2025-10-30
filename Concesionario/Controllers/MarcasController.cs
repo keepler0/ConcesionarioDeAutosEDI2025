@@ -57,7 +57,7 @@ namespace Concesionario.WebApi.Controllers
 			if (marcaBack is null) return NotFound();
 			marcaBack = _mapper.Map<Marca>(marcaRequestDto);
 			_marca.Save(marcaBack);
-			return Ok();
+			return Ok(_mapper.Map<MarcaResponseDto>(marcaBack));
 		}
 		[HttpDelete]
 		[Route("Delete")]

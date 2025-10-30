@@ -58,7 +58,7 @@ namespace Concesionario.WebApi.Controllers
 			if (estadoBack is null) return NotFound();
 			estadoBack = _mapper.Map<Estado>(estadoRequestDto);
 			_estado.Save(estadoBack);
-			return Ok();
+			return Ok(_mapper.Map<EstadoResponseDto>(estadoBack));
 		}
 		[HttpDelete]
 		[Route("Delete")]

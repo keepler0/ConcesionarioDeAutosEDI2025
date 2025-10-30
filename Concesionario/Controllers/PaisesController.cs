@@ -55,7 +55,7 @@ namespace Concesionario.WebApi.Controllers
 			if (paisBack is null) return NotFound();
 			paisBack = _mapper.Map<Pais>(paisRequestDto);
 			_pais.Save(paisBack);
-			return Ok();
+			return Ok(_mapper.Map<PaisResponseDto>(paisBack));
 		}
 		[HttpDelete]
 		[Route("Borrar")]

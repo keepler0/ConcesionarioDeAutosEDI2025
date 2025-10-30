@@ -55,7 +55,7 @@ namespace Concesionario.WebApi.Controllers
 			if (ctBack is null) return NotFound();
 			ctBack = _mapper.Map<CategoriaTributaria>(ctRequestDto);
 			_ct.Save(ctBack);
-			return Ok();
+			return Ok(_mapper.Map<CategoriaTributariaResponseDto>(ctBack));
 		}
 		[HttpDelete]
 		[Route("Borrar")]

@@ -10,7 +10,7 @@ namespace Concesionario.Entities
             Autos=new HashSet<Auto>();
         }
         public int Id { get; set; }
-		[StringLength(6)]
+		[StringLength(10)]//Cambiar el string lengt a 10
 		public string Descripcion { get; set; } = string.Empty;
         public virtual ICollection<Auto> Autos { get; set; }
     }

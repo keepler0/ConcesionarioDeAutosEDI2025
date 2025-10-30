@@ -56,7 +56,7 @@ namespace Concesionario.WebApi.Controllers
 			if (traccionBack is null) return NotFound();
 			traccionBack = _mapper.Map<Traccion>(traccionRequestDto);
 			_traccion.Save(traccionBack);
-			return Ok();
+			return Ok(_mapper.Map<TraccionResponseDto>(traccionBack));
 		}
 		[HttpDelete]
 		[Route("Delete")]
