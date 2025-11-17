@@ -2,6 +2,7 @@
 
 namespace Concesionario.Repository
 {
+	//TODO: Poner Try/Catch
 	public interface IRepository<T> : IDbOperation<T> where T : class
     {
     }

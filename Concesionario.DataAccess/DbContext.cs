@@ -3,6 +3,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace Concesionario.DataAccess
 {
+	//TODO: Agregar Try/Catch
 	public class DbContext<T>:IDbContext<T> where T : class, IEntidad
 	{
 		DbSet<T> _Items;

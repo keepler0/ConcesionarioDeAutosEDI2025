@@ -29,7 +29,18 @@ namespace Concesionario.DataAccess
 		public DbDataAccess(DbContextOptions<DbDataAccess> options) : base(options)
 		{
 		}
+<<<<<<< Updated upstream
 		protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder) => optionsBuilder.LogTo(Console.WriteLine).EnableDetailedErrors();
 
+=======
+		protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder) => 
+																	  optionsBuilder.LogTo(Console.WriteLine)
+																					.EnableDetailedErrors();
+		protected override void OnModelCreating(ModelBuilder builder)
+		{
+			base.OnModelCreating(builder);
+			builder.ApplyConfigurationsFromAssembly(GetType().Assembly);
+		}
+>>>>>>> Stashed changes
 	}
 }
