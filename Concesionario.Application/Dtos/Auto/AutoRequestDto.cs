@@ -7,7 +7,6 @@ namespace Concesionario.Application.Dtos.Auto
 		public int id { get; set; }
 		public int MarcaId { get; set; }
 		public string Modelo { get; set; } = string.Empty;
-
 		public int Anio { get; set; }
 		[StringLength(20)]
 		public string Version { get; set; } = string.Empty;
