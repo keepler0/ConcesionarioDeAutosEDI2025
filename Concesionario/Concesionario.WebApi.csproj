@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk.Web">
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
 
   <PropertyGroup>
     <TargetFramework>net8.0</TargetFramework>
@@ -29,6 +29,7 @@
     <ProjectReference Include="..\Concesionario.Application\Concesionario.Application.csproj" />
     <ProjectReference Include="..\Concesionario.DataAccess\Concesionario.DataAccess.csproj" />
     <ProjectReference Include="..\Concesionario.Entities\Concesionario.Entities.csproj" />
+    <ProjectReference Include="..\Concesionario.Exceptions\Concesionario.Exceptions.csproj" />
     <ProjectReference Include="..\Concesionario.Services\Concesionario.Services.csproj" />
   </ItemGroup>
 

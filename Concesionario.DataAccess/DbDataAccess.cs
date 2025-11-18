@@ -33,7 +33,8 @@ namespace Concesionario.DataAccess
 		{
 		}
 		protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder) => 
-								optionsBuilder.LogTo(Console.WriteLine).EnableDetailedErrors();
+																	  optionsBuilder.LogTo(Console.WriteLine)
+																					.EnableDetailedErrors();
 		protected override void OnModelCreating(ModelBuilder builder)
 		{
 			base.OnModelCreating(builder);

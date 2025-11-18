@@ -9,8 +9,10 @@ namespace Concesionario.Application.Dtos.Identity.User
 		[Required]
 		public string Apellidos { get; set; } = string.Empty;
 		[Required]
+		[DataType(DataType.EmailAddress)]
 		public string Email { get; set; } = string.Empty;
 		[Required]
+		[DataType(DataType.Password)]
 		public string Password { get; set; }
 		//public required string Password { get; set; }
 		[DataType(DataType.Date)]
