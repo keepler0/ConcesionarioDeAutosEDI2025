@@ -8,14 +8,14 @@ namespace Concesionario.WebApi.Mapping
 	{
         public AutoMappingProfile()
         {
-            CreateMap<Auto, AutoResponseDto>().ForMember(dest=>dest.Marca,opt=>opt.MapFrom(src=>src.Marca!.ToString()))
-                                              .ForMember(dest => dest.Carroceria, opt => opt.MapFrom(src => src.Carroceria!.ToString()))
-											  .ForMember(dest => dest.Color, opt => opt.MapFrom(src => src.Color!.ToString()))
-											  .ForMember(dest => dest.Combustible, opt => opt.MapFrom(src => src.Combustible!.ToString()))
-											  .ForMember(dest => dest.Estado, opt => opt.MapFrom(src => src.Estado!.ToString()))
-											  .ForMember(dest => dest.Pais, opt => opt.MapFrom(src => src.Pais!.ToString()))
-											  .ForMember(dest => dest.Traccion, opt => opt.MapFrom(src => src.Traccion!.ToString()))
-											  .ForMember(dest => dest.Transmision, opt => opt.MapFrom(src => src.Transmision!.ToString()));
+            CreateMap<Auto, AutoResponseDto>().ForMember(dest=>dest.Marca,opt=>opt.MapFrom(src=>src.Marca!.Descripcion))
+                                              .ForMember(dest => dest.Carroceria, opt => opt.MapFrom(src => src.Carroceria!.Descripcion))
+											  .ForMember(dest => dest.Color, opt => opt.MapFrom(src => src.Color!.Descripcion))
+											  .ForMember(dest => dest.Combustible, opt => opt.MapFrom(src => src.Combustible!.Descripcion))
+											  .ForMember(dest => dest.Estado, opt => opt.MapFrom(src => src.Estado!.Descripcion))
+											  .ForMember(dest => dest.Pais, opt => opt.MapFrom(src => src.Pais!.Nombre))
+											  .ForMember(dest => dest.Traccion, opt => opt.MapFrom(src => src.Traccion!.Descripcion))
+											  .ForMember(dest => dest.Transmision, opt => opt.MapFrom(src => src.Transmision!.Descripcion));
             CreateMap<AutoRequestDto, Auto>();
         }
     }
